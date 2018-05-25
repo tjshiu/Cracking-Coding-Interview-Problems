@@ -22,13 +22,11 @@ function isUnique(string) {
   let char, val;
 
   for (let i = 0; i < string.length; i++) {
-    char = string[i];
-    val = char.charCodeAt();
+    val = string.charCodeAt(i);
     if (char_set[val]) return false;
+    console.log(val);
     char_set[val] = true;
   }
 
   return true;
 }
-
-isUnique("abcdefgh");
